@@ -36,8 +36,20 @@ class MovieCollection:
                 
         return movie_by_year
 
+<<<<<<< HEAD
     def search_collection(self, search_string)
         pass
+=======
+    def search_collection(self, search_string):
+        searched_movies = []
+        
+        for current_movie in self.movie_list:
+            if search_string.lower() in current_movie.title.lower() or current_movie.director.lower() or current_movie.genre.lower():
+                searched_movies.append(current_movie)
+        
+        print(f"SEARCHED MOVIE LIST: {searched_movies}")
+
+>>>>>>> 8d759fd (in the middle of working on search_collection method)
 
 
 
@@ -66,18 +78,36 @@ jack.add_movie(the_big_lebowski)
 jack.add_movie(casino)
 
 
+<<<<<<< HEAD
 jack.remove_movie(the_big_lebowski)
 # print(jack.movie_list)
 jack.remove_movie(logan)
+=======
+# jack.remove_movie(the_big_lebowski)
+# print(jack.movie_list)
+# jack.remove_movie(logan)
+>>>>>>> 8d759fd (in the middle of working on search_collection method)
 # print(jack.movie_list)
 
 # for movie in jack.movie_list:
 #     print(f"CURRENT MOVIE: {movie.title}")
 
 
+<<<<<<< HEAD
 
 print(f"BEFORE MOVIE LIST: {jack.movie_list}")
 
 jack.find_by_year(1982)
 
 print(f"AFTER MOVIE LIST: {jack.movie_list}")
+=======
+jack.search_collection("blade")
+
+
+
+# print(f"BEFORE MOVIE LIST: {jack.movie_list}")
+
+# jack.find_by_year(1982)
+
+# print(f"AFTER MOVIE LIST: {jack.movie_list}")
+>>>>>>> 8d759fd (in the middle of working on search_collection method)
