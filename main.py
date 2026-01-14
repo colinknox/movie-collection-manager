@@ -29,14 +29,13 @@ class MovieCollection:
         movie_by_year = []
 
         for current_movie in self.movie_list:
-            if current_movie.year != year:
-                pass
-            else:
+            if current_movie.year == year:
                 movie_by_year.append(current_movie)
-                
+
         return movie_by_year
 
     def search_collection(self, search_string):
+<<<<<<< HEAD
         searched_movies = []
         
         for current_movie in self.movie_list:
@@ -45,10 +44,23 @@ class MovieCollection:
         
         print(f"SEARCHED MOVIE LIST: {searched_movies}")
 
+=======
+        movies_in_search = []
+        
+        for current_movie in self.movie_list:
+            if search_string.lower() in current_movie.title.lower() or search_string.lower() in current_movie.director.lower() or search_string.lower() in current_movie.genre.lower():
+                movies_in_search.append(current_movie)
+
+        return movies_in_search
+>>>>>>> 2ef1baa (finished search_collection function and fixed the find_b_year function)
 
 
 
+collection = MovieCollection("John")
+collection.add_movie(Movie("Dune", "Denis Villeneuve", 2021, "Sci-Fi"))
+collection.add_movie(Movie("Inception", "Christopher Nolan", 2010, "Sci-Fi"))
 
+<<<<<<< HEAD
 
 blade_runner = Movie("Blade Runner", "Ridley Scott", 1982, "sci-fi")
 mad_max_fury_road = Movie("Mad Max: Fury Road", "George Miller", 2015, "action")
@@ -91,3 +103,7 @@ jack.search_collection("blade")
 # jack.find_by_year(1982)
 
 # print(f"AFTER MOVIE LIST: {jack.movie_list}")
+=======
+print(collection.search_collection("sci"))  # Should return both (genre match)
+print(collection.find_by_year(2021))  # Should return only Dune
+>>>>>>> 2ef1baa (finished search_collection function and fixed the find_b_year function)
