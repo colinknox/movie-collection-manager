@@ -35,16 +35,6 @@ class MovieCollection:
         return movie_by_year
 
     def search_collection(self, search_string):
-<<<<<<< HEAD
-        searched_movies = []
-        
-        for current_movie in self.movie_list:
-            if search_string.lower() in current_movie.title.lower() or current_movie.director.lower() or current_movie.genre.lower():
-                searched_movies.append(current_movie)
-        
-        print(f"SEARCHED MOVIE LIST: {searched_movies}")
-
-=======
         movies_in_search = []
         
         for current_movie in self.movie_list:
@@ -52,7 +42,6 @@ class MovieCollection:
                 movies_in_search.append(current_movie)
 
         return movies_in_search
->>>>>>> 2ef1baa (finished search_collection function and fixed the find_b_year function)
 
 
 
@@ -60,50 +49,5 @@ collection = MovieCollection("John")
 collection.add_movie(Movie("Dune", "Denis Villeneuve", 2021, "Sci-Fi"))
 collection.add_movie(Movie("Inception", "Christopher Nolan", 2010, "Sci-Fi"))
 
-<<<<<<< HEAD
-
-blade_runner = Movie("Blade Runner", "Ridley Scott", 1982, "sci-fi")
-mad_max_fury_road = Movie("Mad Max: Fury Road", "George Miller", 2015, "action")
-logan = Movie("Logan", "James Mangold", 2017, "action")
-the_big_lebowski = Movie("The Big Lebowski", "Joel & Ethan Cohen", 1998, "comedy")
-casino = Movie("Casino", "Martin Scorsese", 1995, "drama")
-
-jack = MovieCollection("Jack")
-
-
-
-# print(blade_runner.year)
-# print(blade_runner.director)
-# print(blade_runner.genre)
-# print(blade_runner.title)
-
-# print(jack.movie_list)
-jack.add_movie(blade_runner)
-jack.add_movie(mad_max_fury_road)
-jack.add_movie(logan)
-jack.add_movie(the_big_lebowski)
-jack.add_movie(casino)
-
-
-# jack.remove_movie(the_big_lebowski)
-# print(jack.movie_list)
-# jack.remove_movie(logan)
-# print(jack.movie_list)
-
-# for movie in jack.movie_list:
-#     print(f"CURRENT MOVIE: {movie.title}")
-
-
-jack.search_collection("blade")
-
-
-
-# print(f"BEFORE MOVIE LIST: {jack.movie_list}")
-
-# jack.find_by_year(1982)
-
-# print(f"AFTER MOVIE LIST: {jack.movie_list}")
-=======
 print(collection.search_collection("sci"))  # Should return both (genre match)
 print(collection.find_by_year(2021))  # Should return only Dune
->>>>>>> 2ef1baa (finished search_collection function and fixed the find_b_year function)
